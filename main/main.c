@@ -30,8 +30,7 @@ int main()
         if (!gpio_get(BTN_PIN))
         {
             gpio_put(LED_PIN, 1);
-            double graus = 360;
-            motor_28BYJ_48(graus/360 * 2048);
+            motor_28BYJ_48(2048);
             gpio_put(LED_PIN, 0);
         }
         while (gpio_get(BTN_PIN)){}
