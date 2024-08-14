@@ -31,7 +31,7 @@ int main()
         {
             gpio_put(LED_PIN, 1);
             double graus = 360;
-            motor_28BYJ_48(graus/180 * 2048);
+            motor_28BYJ_48(graus/360 * 2048);
             gpio_put(LED_PIN, 0);
         }
         while (gpio_get(BTN_PIN)){}
